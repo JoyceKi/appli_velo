@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VeloController!{% endblock %}
+
+{% block body %}
+
+<div class="mb-3 text-center text-warning font-weight-normal">
+    <h1>Enregistrez votre vélo </h1>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="mb-3 text-center text-warning font-weight-normal">
+            
+            {{ form_start(formulaire) }}
+            <div class="my-custom-class-for-errors">
+                {{ form_errors(formulaire) }}
+            </div>
+
+            {{ form_row(formulaire.marque) }}
+            {{ form_row(formulaire.modele) }}
+            {{ form_row(formulaire.num_serie) }}
+            {{ form_row(formulaire.date_achat) }}
+            {{ form_row(formulaire.couleur) }}
+            {{ form_row(formulaire.type_velo) }}
+            {{ form_row(formulaire.fonctionnement) }}
+            {{ form_row(formulaire.photo) }}
+            {{ form_row(formulaire.document) }}
+            {{ form_row(formulaire.envoyer) }}
+
+            {{ form_end(formulaire) }}
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
