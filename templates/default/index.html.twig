@@ -1,24 +1,60 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profil{% endblock %}
+{% block title %}Profil
+{% endblock %}
 
 {% block body %}
 
 
-<div class="example-wrapper">
-    <h1 class="text-warning text-center"> {{ welcomeMessage }} </h1>
-<button class="btn btn-warning mx-auto" type="submit"><a href="{{ path('app_logout') }}">Déconnexion</a></button>
+	<div class="example-wrapper">
+		<h1 class="text-warning text-center">
+			{{ welcomeMessage }}
+		</h1>
+		<button class="btn btn-warning mx-auto" type="submit">
+			<a href="{{ path('app_logout') }}">Déconnexion</a>
+		</button>
 
-<div class="container text-center">
-  <div class="row">
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-  </div>
-</div>
+		<div class="container text-center text-light ">
+			<div class="row">
+				<div class="col ">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body bg-danger">
+							<h5 class="card-title text-light">Enregisrer votre vélo</h5>
+							<p class="card-text text-light">Donnez nous tous les informations possibles sur votre vélo et préservez votre sérénité.</p>
+							<button type="button" class="btn btn-warning"><a href="{{ path('app_velo') }}">Enregistrer</a></button>
+						</div>
+					</div>
+				</div>
+        <div class="col ">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body bg-danger">
+							<h5 class="card-title text-light">Déclarer le vol de votre vélo</h5>
+							<p class="card-text text-light">Cette déclaration vous permettra d'afficher les caractéristiques de votre vélo afin d'optimiser les recherches.</p>
+							<button type="button" class="btn btn-warning">Déclarer</button>
+						</div>
+					</div>
+				</div>
+        <div class="col ">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body bg-danger">
+							<h5 class="card-title text-light">Déclarer votre vélo retrouvé</h5>
+							<p class="card-text text-light">Dites nous quand vous avez retrouvé votre vélo et dans quelles circonstances, pour pouvoir mettre à jour notre liste des vélos volés. </p>
+							<button type="button" class="btn btn-warning"><a href="{{ path('app_velo') }}">Déclarer</a></button>
+						</div>
+					</div>
+				</div>
+        <div class="col ">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body bg-danger">
+							<h5 class="card-title text-light">Dépôt de document(s)</h5>
+							<p class="card-text text-light">Téléchargez vos preuves d'achats ainsi que vos photos du vélo.</p>
+							<button type="button" class="btn btn-warning">Déposer</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-
-</div>
+	</div>
 {% endblock %}
