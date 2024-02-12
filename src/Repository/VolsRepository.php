@@ -45,4 +45,17 @@ class VolsRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+            /**
+     * @return Velo[] Returns an array of Velo objects associated with thefts
+     */
+    public function findStolenBikes()
+    {
+        return $this->createQueryBuilder('v')
+            ->innerJoin('v.vols', 'vl') // Assuming 'vols' is the property in Velo entity that refers to the Vols entity
+            ->andWhere('vl.isStolen = :val') // Assuming 'isStolen' is a property in Vols entity that indicates if the bike is stolen
+            ->setParameter('val', true)
+            ->getQuery()
+            ->getResult();
+    }
 }
